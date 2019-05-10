@@ -40,8 +40,6 @@ RUN echo $TZ > /etc/timezone \
 
 WORKDIR ${APP_HOME}
 
-ADD . ${APP_HOME}
-
 RUN docker-php-ext-install gd && \
     docker-php-ext-configure gd \
         --enable-gd-native-ttf \
